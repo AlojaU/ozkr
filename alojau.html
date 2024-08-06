@@ -7,8 +7,97 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://kit.fontawesome.com/c3c8e79b20.js" crossorigin="anonymous"></script>
     <title>Aloja U</title>
+    <style>
+        /* Animaciones y Transiciones */
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-info-gradient {
+            background: linear-gradient(45deg, #007bff, #00bcd4);
+            color: white;
+        }
+
+        .btn-info-gradient:hover {
+            background: linear-gradient(45deg, #0056b3, #0097a7);
+        }
+
+        .red-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .red-social a:hover {
+            color: #007bff;
+        }
+
+        .office-location img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Estilos para la sección de la oficina física */
+.office-location-container {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.office-location {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.office-location h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.office-location p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.office-location img {
+    max-width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.office-location a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.office-location a:hover {
+    text-decoration: underline;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    </style>
 </head>
 
 <body>
@@ -34,7 +123,7 @@
             </div>
         </nav>
 
-        <div class="inicio">
+        <div class="inicio" data-aos="fade-up">
             <a>¡Un click, a tu lugar ideal!</a>
         </div>
         <div class="wabe">
@@ -47,7 +136,7 @@
     </header>
 
     <main>
-        <section class="sobrenosotros-container">
+        <section class="sobrenosotros-container" data-aos="fade-up">
             <div class="sobrenosotros">
                 <h1>Sobre Nosotros</h1>
                 <h2>
@@ -59,19 +148,19 @@
                     ¡Encuentra tu próximo hogar con nosotros aquí!"
                 </h2>
                 <a href="Departamentos.html">
-                    <img src="img/RPReplay-Final1718694746-unscreen 2.gif" alt="Click-aqui" class="imagen-pequenia">
+                    <img src="img/RPReplay-Final1718694746-unscreen 2.gif" alt="Click-aqui" class="imagen-pequenia hover-zoom">
                 </a>
             </div>
         </section>
 
         <!-- Sección de Casas Top -->
-        <section class="casas-top-container">
+        <section class="casas-top-container" data-aos="fade-up">
             <div class="casas-top text-center">
                 <h1>Casas Top</h1>
                 <p>Descubre nuestras casas destacadas que han adquirido el plan premium para ofrecerte la mejor experiencia. Estas casas tienen características exclusivas y están más promocionadas para que encuentres rápidamente tu hogar ideal.</p>
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4">
-                        <div class="card mb-4">
+                        <div class="card mb-4 hover-zoom" data-aos="zoom-in">
                             <img src="img/casa2.1.jpg" class="card-img-top" alt="Casa Premium 1">
                             <div class="card-body">
                                 <h5 class="card-title">Casa Mexico 68</h5>
@@ -81,7 +170,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card mb-4">
+                        <div class="card mb-4 hover-zoom" data-aos="zoom-in">
                             <img src="img/casa de daiana.png" class="card-img-top" alt="Casa Premium 2">
                             <div class="card-body">
                                 <h5 class="card-title">Departamento Bosques de Manzanilla</h5>
@@ -93,16 +182,30 @@
                 </div>
             </div>
         </section>
+        <section class="office-location-container" data-aos="fade-up">
+            <div class="office-location text-center">
+                <h1>Nuestra Oficina Física</h1>
+                <p>Visítanos en nuestra oficina para consultas y asistencia personalizada.</p>
+                <p><strong>Dirección:</strong> Calle Río Bec, Fraccionamiento  Macopolli, Casa 2D C.P. 72730</p>
+                <div class="map-container">
+                    <a href="https://maps.app.goo.gl/cmJewseaLCJedZ6c6" target="_blank">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3609.2263042548516!2d-98.26613890000002!3d19.051722200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDAzJzA2LjIiTiA5OMKwMTUnNTguMSJX!5e1!3m2!1ses-419!2smx!4v1722931444011!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
 
-        <section class="solicitud-renta-container">
+        <section class="solicitud-renta-container" data-aos="fade-up">
             <div class="solicitud-renta">
                 <h1>¿Quieres que tu casa esté en nuestra página?</h1>
                 <p>Si tienes una casa que deseas rentar a estudiantes, ¡nos encantaría ayudarte a encontrar inquilinos! Haz clic en el botón a continuación para llenar un formulario y enviarnos los detalles de tu propiedad.</p>
                 <a href="formulariorentacasas.html" class="btn btn-custom">Solicita Aquí</a>
             </div>
         </section>
-    </main>
 
+        
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
@@ -130,6 +233,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+        });
+    </script>
 </body>
 
 </html>
